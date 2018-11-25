@@ -16,7 +16,7 @@ def player_input():
         return ('O','X')
     
 def place_marker(board, marker, position):
-    position = int(input('Enter a number fucker [1,9]: '))
+    position = int(input('Enter a number [1,9]: '))
     board [position] = marker 
     
 def win_check(board, mark):
@@ -54,7 +54,7 @@ def player_choice(board):
     return position
 
 def replay():
-    choice = input('Do u wanna play again nigga: ')
+    choice = input('Do u wanna play again: ')
     if choice == 'Y':
         return True
     else:
@@ -79,12 +79,12 @@ while True:
             place_marker(theBoard, player1_marker, position)
             if win_check(theBoard, player1_marker):
                 display_board(theBoard)
-                print('You won the game fucker!')
+                print('You won the game!')
                 game = False
             else:
                 if full_board_check(theBoard):
                     display_board(theBoard)
-                    print('Game is a draw fuckers!')
+                    print('Game is a draw!')
                     break
                 else:
                     turn = 'Player 2'
@@ -94,12 +94,12 @@ while True:
             place_marker(theBoard, player2_marker, position)
             if win_check(theBoard, player2_marker):
                 display_board(theBoard)
-                print('You won the game fucker!')
+                print('You won the game!')
                 game = False
             else:
                 if full_board_check(theBoard):
                     display_board(theBoard)
-                    print('Game is a draw fuckers!')
+                    print('Game is a draw!')
                     break
                 else:
                     turn = 'Player 1'
